@@ -9,6 +9,6 @@ tags: [climbing, technology, dessert]
 This is a test post.
 
 ```c
-cout << "Beep beep boop signing off,\n" << endl'
+cout << "Beep beep boop signing off,\n" << endl;
 ```
 Danny
