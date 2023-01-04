@@ -8,7 +8,7 @@ tags: [climbing, technology, dessert]
 
 Hello and thanks for visiting my blog. Great content is on the way!
 
-```c
-cout << "Beep beep boop signing off," << endl;
+```python
+print("Beep beep boop signing off,")
 ```
 Danny
