@@ -1,7 +1,7 @@
 ---
 title: "The Best Books of 2020"
 categories: [books, literature]
-tags: [books, best of, 2020]
+tags: [books, best of, "2020"]
 ---
 
 # The Best Books of 2020
