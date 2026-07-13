@@ -1,12 +1,11 @@
 ---
-import { SITE_TITLE } from '../consts';
-import { withBase } from '../lib/url';
+import { PARENT_SITE_NAME, PARENT_SITE_URL } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
 	<nav>
-		<h2><a href={withBase('/')}>{SITE_TITLE}</a></h2>
+		<h2><a href={PARENT_SITE_URL}>{PARENT_SITE_NAME}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
