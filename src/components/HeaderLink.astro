@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import { withBase } from '../lib/url';
 
 type Props = HTMLAttributes<'a'>;
 
@@ -7,9 +8,14 @@ const { href, class: className, ...props } = Astro.props;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+
+// href is base-relative (e.g. "/", "/blog") for the isActive check above; the rendered
+// link itself needs the deployed base path (e.g. "/blog/") or it resolves against the
+// domain root instead of this site's own base, which is a different site on this host.
+const fullHref = withBase(href as string);
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a href={fullHref} class:list={[className, { active: isActive }]} {...props}>
 	<slot />
 </a>
 <style>
