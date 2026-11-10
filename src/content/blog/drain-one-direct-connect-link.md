@@ -3,6 +3,8 @@ title: "DeepL drains one Direct Connect link without moving every Region"
 description: "Local preference would have changed the exit for all Regions at once. An AS_PATH prepend changes it for one, because the decision is made at each Cloud WAN edge."
 pubDate: 'Nov 09 2026 13:00'
 imageTag: 'Networking'
+heroImage: '../../assets/post-images/drain-one-direct-connect-link.png'
+imageTheme: 'green'
 ---
 
 [DeepL and AWS published a write-up](https://aws.amazon.com/blogs/architecture/how-deepl-keeps-closest-exit-routing-during-maintenance-with-aws-cloud-wan/) (Nov 9) on taking a single AWS Direct Connect link out of service while every other Region keeps its closest exit. The interesting part is a BGP attribute they chose not to use.
