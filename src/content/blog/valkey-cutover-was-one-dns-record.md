@@ -3,6 +3,8 @@ title: "Topstep moved 53 million keys with one DNS change"
 description: "A trading platform replaced a single self-managed Redis node with ElastiCache for Valkey. The cutover was a DNS record. The TLS certificate was the part to plan for."
 pubDate: 'Nov 09 2026 09:00'
 imageTag: 'Valkey'
+heroImage: '../../assets/post-images/valkey-cutover-was-one-dns-record.png'
+imageTheme: 'green'
 ---
 
 [Topstep and AWS published a migration write-up](https://aws.amazon.com/blogs/database/topsteps-migration-journey-self-managed-redis-oss-to-amazon-elasticache-for-valkey/) (Nov 9) about moving roughly 53 million keys from one self-managed Redis OSS 7.4 node to a Multi-AZ Amazon ElastiCache for Valkey 7.2.6 cluster. The headline is that the cutover took a few seconds. The useful parts are what made that possible and the one thing that nearly gets in the way.
