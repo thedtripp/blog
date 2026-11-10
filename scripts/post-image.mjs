@@ -58,11 +58,21 @@ const slugs = readdirSync(postsDir).filter((f) => f.endsWith('.md')).map((f) => 
 const all = slugs.map((s) => ({ slug: s, ...readPost(s) }));
 const byDate = (a, b) => new Date(a.fm.pubDate) - new Date(b.fm.pubDate);
 
-// Next theme continues the rotation from the most recent post that already has one.
-function nextTheme() {
-	const themed = all.filter((p) => ORDER.includes(p.fm.imageTheme)).sort(byDate);
-	if (!themed.length) return ORDER[0];
-	return ORDER[(ORDER.indexOf(themed.at(-1).fm.imageTheme) + 1) % ORDER.length];
+// Pick a theme for `slug` that differs from its neighbors by date (the nearest earlier and later posts
+// that already have a theme), preferring the next color in rotation after the earlier neighbor.
+function nextTheme(slug) {
+	const sorted = [...all].sort((a, b) => byDate(a, b) || a.slug.localeCompare(b.slug));
+	const i = sorted.findIndex((p) => p.slug === slug);
+	const themed = (p) => ORDER.includes(p.fm.imageTheme);
+	const prev = sorted.slice(0, i).reverse().find(themed);
+	const next = sorted.slice(i + 1).find(themed);
+	const avoid = new Set([prev?.fm.imageTheme, next?.fm.imageTheme]);
+	const start = prev ? ORDER.indexOf(prev.fm.imageTheme) + 1 : 0;
+	for (let k = 0; k < ORDER.length; k++) {
+		const candidate = ORDER[(start + k) % ORDER.length];
+		if (!avoid.has(candidate)) return candidate;
+	}
+	return ORDER[start % ORDER.length];
 }
 
 const args = process.argv.slice(2);
@@ -83,7 +93,7 @@ mkdirSync(outDir, { recursive: true });
 
 for (const slug of targets) {
 	const post = readPost(slug);
-	const theme = ORDER.includes(post.fm.imageTheme) ? post.fm.imageTheme : nextTheme();
+	const theme = ORDER.includes(post.fm.imageTheme) ? post.fm.imageTheme : nextTheme(slug);
 	const tag = post.fm.imageTag ? `<div class="tag">${escapeHtml(post.fm.imageTag)}</div>` : '';
 	const html = readFileSync(join(tplDir, 'template.html'), 'utf8')
 		.replace('{{RGB}}', THEMES[theme])
