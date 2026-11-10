@@ -14,6 +14,9 @@ const blog = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
+			// Used by scripts/post-image.mjs: overlay color rotation and the small label on the card.
+			imageTheme: z.enum(['purple', 'blue', 'green', 'red']).optional(),
+			imageTag: z.string().optional(),
 		}),
 });
 

@@ -1,7 +1,10 @@
 ---
 title: "A 404 isn't proof an endpoint is dead"
 description: 'How I decided 249 failing sources in a data pipeline were really gone, and kept a way to find out if any came back.'
-pubDate: 'Nov 11 2026'
+pubDate: 'Nov 09 2026 15:00'
+imageTag: 'Reliability'
+heroImage: '../../assets/post-images/a-404-is-not-proof.png'
+imageTheme: 'green'
 ---
 
 A data pipeline of mine polls a few thousand hosted public endpoints on a schedule. Over time some of them disappear, and for a while they just show up as failures in the logs. This week I removed 249 of them. Deciding they were dead took more care than deleting them.

@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Poppins;font-weight:500;src:url(fonts/poppins-500.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-800.woff2) format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Poppins,sans-serif}
+:root{--rgb:{{RGB}}}
+html,body{width:1200px;height:630px;overflow:hidden;background:#111;color:#fff}
+.bg{position:absolute;inset:0;background:url(sky.jpg) center/cover;opacity:.8}
+.overlay{position:absolute;inset:0;background:rgb(var(--rgb));mix-blend-mode:overlay}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(var(--rgb),.75),rgba(var(--rgb),.2) 80%)}
+.logo{position:absolute;left:80px;top:56px;font-size:30px;font-weight:800;text-transform:uppercase}
+.wrap{position:absolute;left:80px;right:100px;top:130px;bottom:130px;display:flex;align-items:center}
+h1{font-size:96px;line-height:1.08;font-weight:800;text-transform:uppercase;letter-spacing:-1px;text-wrap:balance}
+.tag{position:absolute;left:80px;bottom:56px;background:#fff;color:#111;padding:10px 30px;text-transform:uppercase;letter-spacing:2px;font-size:22px;font-weight:500}
+.url{position:absolute;right:80px;bottom:62px;font-size:24px;font-weight:500;opacity:.85}
+</style>
+<div class="bg"></div><div class="overlay"></div><div class="shade"></div>
+<div class="logo">DD Tripp</div>
+<div class="wrap"><h1 id="t">{{TITLE}}</h1></div>
+{{TAG}}
+<div class="url">ddtripp.com/blog</div>
+<script>
+document.fonts.ready.then(()=>{
+  const h=document.getElementById('t'),box=h.parentElement;
+  let s=96;
+  while(s>36&&(h.scrollHeight>box.clientHeight||h.scrollWidth>box.clientWidth)){s-=2;h.style.fontSize=s+'px'}
+});
+</script>
