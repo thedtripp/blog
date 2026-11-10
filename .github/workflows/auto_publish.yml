@@ -78,7 +78,14 @@ jobs:
           BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |
           # Use the API, not `gh pr merge`: that also tries to check out main locally and fails here.
-          gh api -X PUT "repos/$REPO/pulls/$PR/merge" -f merge_method=squash
+          # Right after the image commit is pushed, GitHub may answer 405 "not mergeable" while it
+          # recomputes mergeability, so retry for up to a minute.
+          merged=0
+          for i in 1 2 3 4 5 6; do
+            sleep 10
+            if gh api -X PUT "repos/$REPO/pulls/$PR/merge" -f merge_method=squash; then merged=1; break; fi
+          done
+          [ "$merged" = 1 ] || { echo "PR #$PR never became mergeable"; exit 1; }
           gh api -X DELETE "repos/$REPO/git/refs/heads/$BRANCH" || true
           # A merge made with GITHUB_TOKEN does not trigger the push-based deploy, so start it.
           gh workflow run deploy.yml -R "$REPO" --ref main
