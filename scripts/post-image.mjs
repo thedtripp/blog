@@ -12,7 +12,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const postsDir = join(root, 'src/content/blog');
 const outDir = join(root, 'src/assets/post-images');
 const tplDir = join(root, 'scripts/post-image');
-const chrome = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const chrome = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; // CI: google-chrome
 
 // Alternating overlay colors, in rotation order (purple matches the main site).
 const THEMES = {
@@ -93,7 +93,7 @@ for (const slug of targets) {
 	writeFileSync(tmp, html);
 	const out = join(outDir, `${slug}.png`);
 	const r = spawnSync(chrome, [
-		'--headless', '--disable-gpu', '--hide-scrollbars', '--window-size=1200,630',
+		'--headless', '--disable-gpu', ...(process.env.CI ? ['--no-sandbox'] : []), '--hide-scrollbars', '--window-size=1200,630',
 		'--virtual-time-budget=4000', `--screenshot=${out}`, `file://${tmp}`,
 	], { stdio: 'ignore' });
 	rmSync(tmp, { force: true });
