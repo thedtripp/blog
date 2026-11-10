@@ -3,6 +3,8 @@ title: "Google's 90% TPU claim is about moving the KV cache, not faster chips"
 description: 'What TPU Sync actually changes for inference, which numbers Google published, and the caveats the coverage attaches to them.'
 pubDate: 'Nov 09 2026 13:00'
 imageTag: 'AI infra'
+heroImage: '../../assets/post-images/tpu-sync-90-percent-is-a-memory-move.png'
+imageTheme: 'blue'
 ---
 
 "Cuts inference latency by over 90%" is a big claim. The more useful question is what got faster. According to [The New Stack's write-up](https://thenewstack.io/google-tpu-sync-inference/), the claim is about the time spent moving the KV cache between kinds of memory.
