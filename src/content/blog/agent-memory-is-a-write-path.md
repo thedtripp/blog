@@ -1,7 +1,10 @@
 ---
 title: 'Agent memory is a write path into your prompts'
 description: "AWS's guidance on validating writes to Amazon Bedrock AgentCore memory, and the part of it that applies to any agent with memory."
-pubDate: 'Nov 09 2026'
+pubDate: 'Nov 09 2026 09:00'
+imageTag: 'AI security'
+heroImage: '../../assets/post-images/agent-memory-is-a-write-path.png'
+imageTheme: 'purple'
 ---
 
 AWS published guidance today on defending Amazon Bedrock AgentCore memory against poisoning. [The post](https://aws.amazon.com/blogs/security/help-defend-against-memory-poisoning-in-amazon-bedrock-agentcore-with-multi-layer-write-validation/) is worth reading, and here is what I took from it.
