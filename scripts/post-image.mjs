@@ -23,6 +23,10 @@ const THEMES = {
 };
 const ORDER = Object.keys(THEMES);
 
+// Avatar expressions available in scripts/post-image/avatars/. A post picks one with `imageExpression`.
+const EXPRESSIONS = readdirSync(join(root, 'scripts/post-image/avatars')).map((f) => f.replace(/\.jpg$/, ''));
+const DEFAULT_EXPRESSION = 'smug';
+
 const unquote = (v) => {
 	v = v.trim();
 	if (v.startsWith("'") && v.endsWith("'")) return v.slice(1, -1).replace(/''/g, "'");
@@ -95,7 +99,12 @@ for (const slug of targets) {
 	const post = readPost(slug);
 	const theme = ORDER.includes(post.fm.imageTheme) ? post.fm.imageTheme : nextTheme(slug);
 	const tag = post.fm.imageTag ? `<div class="tag">${escapeHtml(post.fm.imageTag)}</div>` : '';
+	const expression = EXPRESSIONS.includes(post.fm.imageExpression) ? post.fm.imageExpression : DEFAULT_EXPRESSION;
+	if (post.fm.imageExpression && expression !== post.fm.imageExpression) {
+		console.warn(`${slug}: unknown imageExpression '${post.fm.imageExpression}', using ${DEFAULT_EXPRESSION}`);
+	}
 	const html = readFileSync(join(tplDir, 'template.html'), 'utf8')
+		.replace('{{AVATAR}}', `avatars/${expression}.jpg`)
 		.replace('{{RGB}}', THEMES[theme])
 		.replace('{{TITLE}}', escapeHtml(post.fm.title))
 		.replace('{{TAG}}', tag);
