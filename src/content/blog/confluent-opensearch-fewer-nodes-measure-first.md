@@ -3,6 +3,8 @@ title: "Confluent cut its OpenSearch hot tier from 168 nodes to 90"
 description: "AWS describes how Confluent swapped instance types at constant node count, measured the headroom, then removed nodes until JVM heap became the limit."
 pubDate: 'Nov 11 2026 13:00'
 imageTag: 'OpenSearch sizing'
+heroImage: '../../assets/post-images/confluent-opensearch-fewer-nodes-measure-first.png'
+imageTheme: 'red'
 ---
 
 Confluent's internal logging system runs on Amazon OpenSearch Service and ingests hundreds of terabytes of logs per day. A [post on the AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/46-fewer-nodes-2x-faster-indexing-confluent-on-amazon-opensearch-service/), published November 10, 2026, describes how the team moved its hot tier to a new instance family and ended up with 90 nodes instead of 168, even though each new node costs more.
