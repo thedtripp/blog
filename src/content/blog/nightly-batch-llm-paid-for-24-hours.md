@@ -5,6 +5,7 @@ pubDate: 'Nov 10 2026 13:00'
 imageTag: 'LLM cost'
 heroImage: '../../assets/post-images/nightly-batch-llm-paid-for-24-hours.png'
 imageTheme: 'green'
+imageExpression: 'facepalm'
 ---
 
 Aditya Mulik of Walmart Global Tech describes a multi-agent LLM workflow that recommends inventory changes to store managers, in an [InfoQ talk with transcript](https://www.infoq.com/presentations/scaling-multi-agent-llm-batch/) from QCon AI. The architecture is ordinary. The failures and the bill are the useful part.

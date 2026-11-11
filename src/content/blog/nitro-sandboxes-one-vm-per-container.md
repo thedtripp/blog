@@ -5,6 +5,7 @@ pubDate: 'Nov 11 2026 09:00'
 imageTag: 'Container isolation'
 heroImage: '../../assets/post-images/nitro-sandboxes-one-vm-per-container.png'
 imageTheme: 'green'
+imageExpression: 'neutral'
 ---
 
 Containers on a shared node all trust one Linux kernel. AWS's argument for its new Nitro Sandboxes is that a single kernel issue can lead to data exposure across pods or tasks, and that with the current rate of Linux CVEs, containerized workloads need each workload isolated from the others and from cluster operators. The [AWS Compute Blog post](https://aws.amazon.com/blogs/compute/nitro-sandboxes-hardware-isolation-for-every-eks-pod-ecs-task-and-ec2-workload/), published November 10, 2026, describes the fix.

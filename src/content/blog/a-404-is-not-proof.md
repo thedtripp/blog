@@ -5,6 +5,7 @@ pubDate: 'Nov 09 2026 15:00'
 imageTag: 'Reliability'
 heroImage: '../../assets/post-images/a-404-is-not-proof.png'
 imageTheme: 'green'
+imageExpression: 'thinking'
 ---
 
 A data pipeline of mine polls a few thousand hosted public endpoints on a schedule. Over time some of them disappear, and for a while they just show up as failures in the logs. This week I removed 249 of them. Deciding they were dead took more care than deleting them.

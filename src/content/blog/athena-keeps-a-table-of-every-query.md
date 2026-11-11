@@ -5,6 +5,7 @@ pubDate: 'Nov 10 2026 15:00'
 imageTag: 'Data'
 heroImage: '../../assets/post-images/athena-keeps-a-table-of-every-query.png'
 imageTheme: 'blue'
+imageExpression: 'excited'
 ---
 
 [Amazon Athena introduced system tables](https://aws.amazon.com/blogs/big-data/amazon-athena-introduces-system-tables-for-query-execution-observability/) (Nov 9, by Pathik Shah, Raza Hafeez and Theo Tolv). The first one, `query_executions`, records one row for every query that completes, successful or failed, across your workgroups. The idea is a good one and worth a look even if you don't use Athena.

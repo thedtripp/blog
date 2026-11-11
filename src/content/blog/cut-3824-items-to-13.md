@@ -5,6 +5,7 @@ pubDate: 'Nov 09 2026 12:00'
 imageTag: 'Build log'
 heroImage: '../../assets/post-images/cut-3824-items-to-13.png'
 imageTheme: 'blue'
+imageExpression: 'excited'
 ---
 
 I'm building a feed reader that finds things worth writing about. The first fetch returned 3,824 new items from over 100 feeds, grouped into five topics: infrastructure, cloud, data engineering, security, and AI.

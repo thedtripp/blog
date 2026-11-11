@@ -5,6 +5,7 @@ pubDate: 'Nov 10 2026 09:00'
 imageTag: 'Postgres'
 heroImage: '../../assets/post-images/postgres-upgrade-is-not-the-scary-part.png'
 imageTheme: 'red'
+imageExpression: 'exhausted'
 ---
 
 [Percona published a walkthrough](https://www.percona.com/blog/beyond-the-version-bump-running-postgresql-major-upgrades-in-percona-operator-for-postgresql/) of major version upgrades in its Operator for PostgreSQL (by Anil Joshi, Nov 9). I build Kubernetes operators for Postgres, so I read it closely. The upgrade mechanics are straightforward. What stood out is what the post says you have to check afterward.
