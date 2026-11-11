@@ -5,6 +5,7 @@ pubDate: 'Nov 10 2026 09:00'
 imageTag: 'LLM reliability'
 heroImage: '../../assets/post-images/reliability-layers-sort-they-dont-fix.png'
 imageTheme: 'purple'
+imageExpression: 'smug'
 ---
 
 A common plan for making an LLM dependable is to wrap it in checks: validate the output, let the model correct itself, vote across samples, add a judge, send the rest to a person. The assumption is that each layer catches errors the earlier ones missed, so accuracy climbs with every layer. A new [InfoQ article](https://www.infoq.com/articles/llm-reliability-layers-limits-accuracy/) by Pushpdeep Mishra and Wejdan Bagais tested that assumption and reports that it did not hold.

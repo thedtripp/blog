@@ -5,6 +5,7 @@ pubDate: 'Nov 09 2026 13:00'
 imageTag: 'Networking'
 heroImage: '../../assets/post-images/drain-one-direct-connect-link.png'
 imageTheme: 'purple'
+imageExpression: 'thinking'
 ---
 
 [DeepL and AWS published a write-up](https://aws.amazon.com/blogs/architecture/how-deepl-keeps-closest-exit-routing-during-maintenance-with-aws-cloud-wan/) (Nov 9) on taking a single AWS Direct Connect link out of service while every other Region keeps its closest exit. The interesting part is a BGP attribute they chose not to use.

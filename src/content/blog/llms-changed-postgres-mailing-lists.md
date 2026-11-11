@@ -5,6 +5,7 @@ pubDate: 'Nov 09 2026 14:00'
 imageTag: 'Postgres'
 heroImage: '../../assets/post-images/llms-changed-postgres-mailing-lists.png'
 imageTheme: 'blue'
+imageExpression: 'confused'
 ---
 
 Hubert "depesz" Lubaczewski noticed something in the PostgreSQL mailing lists and decided to count it. His [post](https://www.depesz.com/2026/11/09/what-llms-do-to-postgresql-and-dbas/) is short, and its charts carry most of the data, so this summary sticks to what he says in the text.
