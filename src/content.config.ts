@@ -17,6 +17,10 @@ const blog = defineCollection({
 			// Used by scripts/post-image.mjs: overlay color rotation and the small label on the card.
 			imageTheme: z.enum(['purple', 'blue', 'green', 'red']).optional(),
 			imageTag: z.string().optional(),
+			// Avatar expression on the card (scripts/post-image/avatars/<name>.jpg); defaults to smug.
+			imageExpression: z
+				.enum(['confused', 'crying', 'excited', 'exhausted', 'facepalm', 'neutral', 'scared', 'shocked', 'smug', 'thinking'])
+				.optional(),
 		}),
 });
 
