@@ -1,8 +1,8 @@
 ---
-title: "Nitro Sandboxes give each container its own VM, at no extra charge"
+title: "Nitro Sandboxes give each pod or task its own VM, at no extra charge"
 description: 'AWS says Nitro Sandboxes put each EKS pod or ECS task in its own hardware-isolated VM with its own kernel, without a separate instance per workload.'
 pubDate: 'Nov 11 2026 09:00'
-imageHeadline: 'Nitro Sandboxes: one VM per container'
+imageHeadline: 'Nitro Sandboxes: one VM per pod or task'
 imageTag: 'Container isolation'
 heroImage: '../../assets/post-images/nitro-sandboxes-one-vm-per-container.png'
 imageTheme: 'green'
