@@ -114,7 +114,7 @@ for (const slug of targets) {
 	if (post.fm.imageDiagram) {
 		let result;
 		try {
-			result = buildDiagram(JSON.parse(post.fm.imageDiagram));
+			result = buildDiagram(JSON.parse(post.fm.imageDiagram), { body: post.text.slice(post.text.indexOf('\n---\n', 4) + 5) });
 		} catch (e) {
 			result = { errors: [`imageDiagram is not valid JSON (${e.message})`] };
 		}

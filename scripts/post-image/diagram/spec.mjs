@@ -2,6 +2,7 @@
 //
 //   {"nodes":[{"id":"apps","label":"Apps","sub":"optional","col":0,"row":1,"style":"solid|muted"}],
 //    "edges":[{"from":"apps","to":"dns","label":"optional","style":"solid|dashed|hot"}],
+//    each node and edge also carries "src": a verbatim quote from the post (checked in verify.mjs).
 //    "note":"optional footnote, e.g. who measured the numbers"}
 // Nodes sit on a 3 x 3 grid (col 0-2, row 0-2). Edges are straight arrows.
 import { fit } from './text.mjs';
