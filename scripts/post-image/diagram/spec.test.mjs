@@ -22,6 +22,7 @@ for (const [name, mutate, expected] of [
 	['edge label too long', (s) => { s.edges[1].label = 'x'.repeat(30); }, /label too long/],
 	['unknown node style', (s) => { s.nodes[0].style = 'neon'; }, /unknown style/],
 	['unknown edge style', (s) => { s.edges[0].style = 'neon'; }, /unknown style/],
+	['note too long', (s) => { s.note = 'x'.repeat(80); }, /note must be/],
 	['self loop', (s) => { s.edges[0].to = 'apps'; }, /loops/],
 ])
 	test(`rejects: ${name}`, () => {

@@ -58,7 +58,8 @@ export function labelCenter(p, q, pillW) {
 	const steep = Math.abs(dx) < Math.abs(dy);
 	let nx = dy / len, ny = -dx / len; // a unit normal
 	if (steep ? nx < 0 : ny > 0) { nx = -nx; ny = -ny; }
-	const gap = steep ? pillW / 2 + 8 : LABEL.h / 2 + 6;
+	// Far enough that the whole pill clears the line: its half-extent along the normal, plus a gap.
+	const gap = Math.abs(nx) * (pillW / 2) + Math.abs(ny) * (LABEL.h / 2) + 6;
 	return { x: mid.x + nx * gap, y: mid.y + ny * gap };
 }
 
@@ -92,5 +93,5 @@ export function layoutDiagram(spec) {
 		}
 		edges.push({ from: e.from, to: e.to, p, q, style: e.style || 'solid', pill });
 	}
-	return { errors, nodes, edges };
+	return { errors, nodes, edges, note: spec.note || null };
 }
