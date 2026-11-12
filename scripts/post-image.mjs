@@ -1,7 +1,7 @@
 // Generate a title image for blog posts and wire it into their front matter.
 //   npm run post-image -- <slug> [<slug> ...]   (slug = filename without .md)
 //   npm run post-image -- --all                 (every post missing a heroImage)
-//   add --force to regenerate an existing image
+//   add --force to regenerate an existing image; --preview=<dir> renders there without touching posts
 // Needs Google Chrome (set CHROME_PATH if it is not at the macOS default).
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
@@ -33,6 +33,8 @@ const unquote = (v) => {
 	if (v.startsWith('"') && v.endsWith('"')) return v.slice(1, -1);
 	return v;
 };
+// Highlight the first number in the headline.
+const withNumber = (html) => html.replace(/(\S*\d\S*)/, '<span class="num">$1</span>');
 const escapeHtml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 function readPost(slug) {
@@ -81,6 +83,8 @@ function nextTheme(slug) {
 
 const args = process.argv.slice(2);
 const force = args.includes('--force');
+const previewArg = args.find((a) => a.startsWith('--preview='));
+const previewDir = previewArg ? resolve(previewArg.slice(10)) : null; // render here; leave front matter alone
 let targets = args.filter((a) => !a.startsWith('--'));
 if (args.includes('--all')) {
 	targets = all.filter((p) => force || !p.fm.heroImage).sort(byDate).map((p) => p.slug);
@@ -93,7 +97,7 @@ if (!existsSync(chrome)) {
 	console.error(`Chrome not found at ${chrome}. Set CHROME_PATH.`);
 	process.exit(1);
 }
-mkdirSync(outDir, { recursive: true });
+mkdirSync(previewDir || outDir, { recursive: true });
 
 for (const slug of targets) {
 	const post = readPost(slug);
@@ -106,11 +110,11 @@ for (const slug of targets) {
 	const html = readFileSync(join(tplDir, 'template.html'), 'utf8')
 		.replace('{{AVATAR}}', `avatars/${expression}.jpg`)
 		.replace('{{RGB}}', THEMES[theme])
-		.replace('{{TITLE}}', escapeHtml(post.fm.title))
+		.replace('{{TITLE}}', withNumber(escapeHtml(post.fm.imageHeadline || post.fm.title)))
 		.replace('{{TAG}}', tag);
 	const tmp = join(tplDir, '.render.html');
 	writeFileSync(tmp, html);
-	const out = join(outDir, `${slug}.png`);
+	const out = join(previewDir || outDir, `${slug}.png`);
 	const r = spawnSync(chrome, [
 		'--headless', '--disable-gpu', ...(process.env.CI ? ['--no-sandbox'] : []), '--hide-scrollbars', '--window-size=1200,630',
 		'--virtual-time-budget=4000', `--screenshot=${out}`, `file://${tmp}`,
@@ -119,6 +123,10 @@ for (const slug of targets) {
 	if (r.status !== 0 || !existsSync(out)) {
 		console.error(`${slug}: Chrome failed to render`);
 		process.exit(1);
+	}
+	if (previewDir) {
+		console.log(`${slug}: preview -> ${out}`);
+		continue;
 	}
 	setKeys(post, { heroImage: `../../assets/post-images/${slug}.png`, imageTheme: theme });
 	// Keep the in-memory list current so the next post continues the rotation.
