@@ -21,3 +21,9 @@ test('layout errors stop before render', () => {
 	assert.match(r.errors.join(), /passes through/);
 	assert.equal(r.svg, undefined);
 });
+test('the note is passed through', () => {
+	const g = good();
+	g.note = "Figures are the vendor's";
+	assert.equal(buildDiagram(g).note, "Figures are the vendor's");
+	assert.equal(buildDiagram(good()).note, null);
+});

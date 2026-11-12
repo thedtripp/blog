@@ -110,6 +110,7 @@ for (const slug of targets) {
 	}
 	// Optional diagram card. Off unless the post has `imageDiagram`; any problem falls back to the normal card.
 	let diagramSvg = null;
+	let diagramNote = '';
 	if (post.fm.imageDiagram) {
 		let result;
 		try {
@@ -118,7 +119,10 @@ for (const slug of targets) {
 			result = { errors: [`imageDiagram is not valid JSON (${e.message})`] };
 		}
 		if (result.errors.length) console.warn(`${slug}: diagram not used, falling back to the normal card:\n  - ${result.errors.join('\n  - ')}`);
-		else diagramSvg = result.svg;
+		else {
+			diagramSvg = result.svg;
+			diagramNote = result.note ? `<div class="note">${escapeHtml(result.note)}</div>` : '';
+		}
 	}
 	const headline = withNumber(escapeHtml(post.fm.imageHeadline || post.fm.title));
 	const html = readFileSync(join(tplDir, diagramSvg ? 'template-diagram.html' : 'template.html'), 'utf8')
@@ -126,7 +130,8 @@ for (const slug of targets) {
 		.replace('{{RGB}}', THEMES[theme])
 		.replace('{{TITLE}}', () => headline)
 		.replace('{{TAG}}', () => tag)
-		.replace('{{DIAGRAM}}', () => diagramSvg || '');
+		.replace('{{DIAGRAM}}', () => diagramSvg || '')
+		.replace('{{NOTE}}', () => diagramNote);
 	const tmp = join(tplDir, '.render.html');
 	writeFileSync(tmp, html);
 	const out = join(previewDir || outDir, `${slug}.png`);

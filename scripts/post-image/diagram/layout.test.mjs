@@ -64,3 +64,11 @@ test('a label pushed off the canvas is an error', () => {
 	const s = { nodes: [{ id: 'a', label: 'A', col: 2, row: 0 }, { id: 'b', label: 'B', col: 2, row: 2 }], edges: [{ from: 'a', to: 'b', label: 'x'.repeat(18) }] };
 	assert.match(layoutDiagram(s).errors.join(), /runs off the image/);
 });
+test('a label clears a diagonal line by its full half-extent', () => {
+	const p = { x: 0, y: 0 }, q = { x: 200, y: 100 }, w = 100;
+	const c = labelCenter(p, q, w);
+	const len = Math.hypot(200, 100), nx = 100 / len, ny = -200 / len;
+	// distance from the label center to the line must cover the pill's extent along the normal
+	const dist = (c.x - 100) * nx + (c.y - 50) * ny;
+	assert.ok(dist >= Math.abs(nx) * (w / 2) + Math.abs(ny) * 14, 'pill touches the line');
+});
