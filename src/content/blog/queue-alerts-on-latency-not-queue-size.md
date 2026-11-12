@@ -5,6 +5,8 @@ pubDate: 'Nov 12 2026 13:00'
 imageHeadline: 'Alert on queue latency, not size'
 imageTag: 'Observability'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/queue-alerts-on-latency-not-queue-size.png'
+imageTheme: 'blue'
 ---
 
 Oli Lane and Julian Wreford of Gearset describe how they moved from guessing at queue problems to pointing at the exact bottleneck, in an [InfoQ talk with transcript](https://www.infoq.com/presentations/opentelemetry-queue-observability/) from QCon London 2026. The starting point was a customer asking why a backup job ran about an hour late. Dashboards, metrics, logs and alerts gave plausible theories, but the team never learned why that job was late.
