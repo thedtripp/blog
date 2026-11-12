@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "post-image": "node scripts/post-image.mjs"
+    "post-image": "node scripts/post-image.mjs",
+    "test:diagram": "node --test scripts/post-image/diagram/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.2",

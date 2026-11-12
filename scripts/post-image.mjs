@@ -7,7 +7,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, rmSync
 import { spawnSync } from 'node:child_process';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildDiagram } from './post-image/diagram.mjs';
+import { buildDiagram } from './post-image/diagram/index.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const postsDir = join(root, 'src/content/blog');
