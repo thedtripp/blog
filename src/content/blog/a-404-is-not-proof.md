@@ -2,6 +2,8 @@
 title: "A 404 isn't proof an endpoint is dead"
 description: 'How I decided 249 failing sources in a data pipeline were really gone, and kept a way to find out if any came back.'
 pubDate: 'Nov 09 2026 15:00'
+imageHeadline: 'A 404 isn’t proof an endpoint is dead'
+imageDiagram: '{"nodes": [{"id": "n", "label": "Three 404s", "col": 0, "row": 1, "sub": "in a row = candidate", "src": "a source only becomes a candidate for removal after three consecutive failures that are 404s"}, {"id": "p", "label": "Re-probe live", "col": 1, "row": 1, "sub": "at the moment of removal", "src": "the cleanup tool re-checks every candidate live at the moment of removal"}, {"id": "r", "label": "Retired file", "col": 2, "row": 1, "sub": "permanent record", "src": "Each removed source is appended to a permanent file that records what was retired"}, {"id": "c", "label": "Recheck command", "col": 2, "row": 2, "sub": "lists any live again", "src": "A separate recheck command reads that file, probes each entry again, and lists any that are live again"}], "edges": [{"from": "n", "to": "p", "src": "re-checks every candidate live at the moment of removal"}, {"from": "p", "to": "r", "src": "Only the ones still failing are removed"}, {"from": "r", "to": "c", "src": "A separate recheck command reads that file, probes each entry again"}]}'
 imageTag: 'Reliability'
 heroImage: '../../assets/post-images/a-404-is-not-proof.png'
 imageTheme: 'green'

@@ -2,6 +2,8 @@
 title: "Topstep moved 53 million keys with one DNS change"
 description: "A trading platform replaced a single self-managed Redis node with ElastiCache for Valkey. The cutover was a DNS record. The TLS certificate was the part to plan for."
 pubDate: 'Nov 09 2026 09:00'
+imageHeadline: '53M keys moved with one DNS change'
+imageDiagram: '{"nodes": [{"id": "apps", "label": "Apps", "col": 0, "row": 1, "src": "when clients connect through the custom name"}, {"id": "dns", "label": "DNS record", "col": 1, "row": 1, "sub": "Route 53", "src": "change the Route 53 record from an A record pointing at the EC2 IP to a CNAME"}, {"id": "old", "label": "Old: Redis OSS 7.4", "col": 2, "row": 0, "sub": "one EC2 node, no replica", "style": "muted", "src": ["The source was Redis OSS 7.4", "one node, no replica, no automatic failover"]}, {"id": "new", "label": "New: Valkey", "col": 2, "row": 2, "sub": "primary + replica, TLS", "src": "primary plus replica, Multi-AZ, TLS on"}], "edges": [{"from": "apps", "to": "dns", "src": "when clients connect through the custom name"}, {"from": "dns", "to": "old", "label": "before", "src": "an A record pointing at the EC2 IP"}, {"from": "dns", "to": "new", "label": "after: CNAME", "style": "hot", "src": "to a CNAME pointing at the ElastiCache primary endpoint"}, {"from": "old", "to": "new", "label": "RedisShake", "style": "dashed", "src": "they used RedisShake in PSYNC mode"}]}'
 imageTag: 'Valkey'
 heroImage: '../../assets/post-images/valkey-cutover-was-one-dns-record.png'
 imageTheme: 'red'

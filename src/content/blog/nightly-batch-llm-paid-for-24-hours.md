@@ -2,6 +2,7 @@
 title: "A nightly LLM batch job was paying for 24-hour capacity"
 description: 'Walmart Global Tech says switching a nightly multi-agent inventory job from reserved PTUs to pay-as-you-go cut inference from about $100k a month to $10k.'
 pubDate: 'Nov 10 2026 13:00'
+imageHeadline: 'A nightly LLM job paid for 24 hours'
 imageTag: 'LLM cost'
 heroImage: '../../assets/post-images/nightly-batch-llm-paid-for-24-hours.png'
 imageTheme: 'green'

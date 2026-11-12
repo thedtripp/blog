@@ -2,6 +2,8 @@
 title: "Google's 90% TPU claim is about moving the KV cache, not faster chips"
 description: 'What TPU Sync actually changes for inference, which numbers Google published, and the caveats the coverage attaches to them.'
 pubDate: 'Nov 09 2026 13:00'
+imageHeadline: 'Google’s 90% TPU claim is a memory move'
+imageDiagram: '{"nodes": [{"id": "pre", "label": "Prefill workers", "col": 0, "row": 1, "src": "disaggregated serving splits prefill and decode across separate workers"}, {"id": "sync", "label": "TPU Sync", "col": 1, "row": 1, "sub": "seconds to about 230 ms", "style": "muted", "src": "went from several seconds to about 230 milliseconds"}, {"id": "dec", "label": "Decode workers", "col": 2, "row": 1, "src": "disaggregated serving splits prefill and decode across separate workers"}], "edges": [{"from": "pre", "to": "sync", "label": "KV cache", "style": "hot", "src": ["the KV cache has to move between them", "TPU Sync looks aimed at that gap"]}, {"from": "sync", "to": "dec", "label": "KV cache", "style": "hot", "src": ["the KV cache has to move between them", "TPU Sync looks aimed at that gap"]}], "note": "Google’s benchmark (The New Stack). Placement is the post’s reading."}'
 imageTag: 'AI infra'
 heroImage: '../../assets/post-images/tpu-sync-90-percent-is-a-memory-move.png'
 imageTheme: 'blue'

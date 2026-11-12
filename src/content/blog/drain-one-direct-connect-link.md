@@ -2,6 +2,8 @@
 title: "DeepL drains one Direct Connect link without moving every Region"
 description: "Local preference would have changed the exit for all Regions at once. An AS_PATH prepend changes it for one, because the decision is made at each Cloud WAN edge."
 pubDate: 'Nov 09 2026 13:00'
+imageHeadline: 'DeepL drains one Direct Connect link'
+imageDiagram: '{"nodes": [{"id": "d", "label": "Dublin link", "col": 0, "row": 1, "sub": "AS_PATH prepended", "style": "muted", "src": "An on-premises AS_PATH prepend on the Dublin virtual interface"}, {"id": "w", "label": "eu-west-1 edge", "col": 1, "row": 1, "sub": "sees a longer path", "src": "The eu-west-1 edge sees its gateway path become longer than the paths from the eu-central-1 and eu-north-1 edges"}, {"id": "c", "label": "eu-central-1 edge", "col": 2, "row": 0, "sub": "exits via Copenhagen", "src": "eu-central-1 through Copenhagen"}, {"id": "n", "label": "eu-north-1 edge", "col": 2, "row": 2, "sub": "exits via Stockholm", "src": "eu-north-1 through Stockholm"}], "edges": [{"from": "d", "to": "w", "label": "prepend", "style": "dashed", "src": "An on-premises AS_PATH prepend on the Dublin virtual interface"}, {"from": "w", "to": "c", "label": "core network", "style": "dashed", "src": "so it sends traffic across the core network and out through Copenhagen or Stockholm"}, {"from": "w", "to": "n", "label": "core network", "style": "dashed", "src": "so it sends traffic across the core network and out through Copenhagen or Stockholm"}], "note": "Cloud WAN picks Copenhagen or Stockholm by default"}'
 imageTag: 'Networking'
 heroImage: '../../assets/post-images/drain-one-direct-connect-link.png'
 imageTheme: 'purple'
