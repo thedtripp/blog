@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, rmSync
 import { spawnSync } from 'node:child_process';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildDiagram } from './post-image/diagram.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const postsDir = join(root, 'src/content/blog');
@@ -107,11 +108,25 @@ for (const slug of targets) {
 	if (post.fm.imageExpression && expression !== post.fm.imageExpression) {
 		console.warn(`${slug}: unknown imageExpression '${post.fm.imageExpression}', using ${DEFAULT_EXPRESSION}`);
 	}
-	const html = readFileSync(join(tplDir, 'template.html'), 'utf8')
+	// Optional diagram card. Off unless the post has `imageDiagram`; any problem falls back to the normal card.
+	let diagramSvg = null;
+	if (post.fm.imageDiagram) {
+		let result;
+		try {
+			result = buildDiagram(JSON.parse(post.fm.imageDiagram));
+		} catch (e) {
+			result = { errors: [`imageDiagram is not valid JSON (${e.message})`] };
+		}
+		if (result.errors.length) console.warn(`${slug}: diagram not used, falling back to the normal card:\n  - ${result.errors.join('\n  - ')}`);
+		else diagramSvg = result.svg;
+	}
+	const headline = withNumber(escapeHtml(post.fm.imageHeadline || post.fm.title));
+	const html = readFileSync(join(tplDir, diagramSvg ? 'template-diagram.html' : 'template.html'), 'utf8')
 		.replace('{{AVATAR}}', `avatars/${expression}.jpg`)
 		.replace('{{RGB}}', THEMES[theme])
-		.replace('{{TITLE}}', withNumber(escapeHtml(post.fm.imageHeadline || post.fm.title)))
-		.replace('{{TAG}}', tag);
+		.replace('{{TITLE}}', () => headline)
+		.replace('{{TAG}}', () => tag)
+		.replace('{{DIAGRAM}}', () => diagramSvg || '');
 	const tmp = join(tplDir, '.render.html');
 	writeFileSync(tmp, html);
 	const out = join(previewDir || outDir, `${slug}.png`);
