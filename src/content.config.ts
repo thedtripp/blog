@@ -19,6 +19,8 @@ const blog = defineCollection({
 			imageTag: z.string().optional(),
 			// Short headline for the card (5-7 words; the first number is highlighted); defaults to the title.
 			imageHeadline: z.string().optional(),
+			// Optional diagram card: one line of JSON, see scripts/post-image/diagram.mjs. Off when absent.
+			imageDiagram: z.string().optional(),
 			// Avatar expression on the card (scripts/post-image/avatars/<name>.jpg); defaults to smug.
 			imageExpression: z
 				.enum(['confused', 'crying', 'excited', 'exhausted', 'facepalm', 'neutral', 'scared', 'shocked', 'smug', 'thinking'])
