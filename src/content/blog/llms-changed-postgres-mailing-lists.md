@@ -2,6 +2,7 @@
 title: "LLMs are moving Postgres questions out of public channels"
 description: "A summary of depesz's look at PostgreSQL mailing list traffic: more bug reports, fewer general questions, and a quieter community."
 pubDate: 'Nov 09 2026 14:00'
+imageHeadline: 'Postgres questions leave public channels'
 imageTag: 'Postgres'
 heroImage: '../../assets/post-images/llms-changed-postgres-mailing-lists.png'
 imageTheme: 'blue'

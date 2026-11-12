@@ -2,6 +2,7 @@
 title: "Stacking LLM checks sorted answers. It fixed almost none."
 description: 'An InfoQ test of six reliability layers around an LLM found they ranked answers by trust but corrected almost nothing, and why yield matters next to accuracy.'
 pubDate: 'Nov 10 2026 09:00'
+imageHeadline: 'LLM checks sorted answers, fixed almost none'
 imageTag: 'LLM reliability'
 heroImage: '../../assets/post-images/reliability-layers-sort-they-dont-fix.png'
 imageTheme: 'purple'

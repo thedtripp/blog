@@ -2,6 +2,8 @@
 title: 'Agent memory is a write path into your prompts'
 description: "AWS's guidance on validating writes to Amazon Bedrock AgentCore memory, and the part of it that applies to any agent with memory."
 pubDate: 'Nov 09 2026 09:00'
+imageHeadline: 'Agent memory is a write path'
+imageDiagram: '{"nodes": [{"id": "w", "label": "Agent write", "col": 0, "row": 1, "src": "A function that runs before each write and scores it"}, {"id": "sc", "label": "Score the write", "col": 1, "row": 1, "sub": "four signals", "src": ["A function that runs before each write and scores it", "Four signals feed the score"]}, {"id": "al", "label": "Allow", "col": 2, "row": 0, "sub": "below 35", "src": "Below 35: allow."}, {"id": "qu", "label": "Quarantine", "col": 2, "row": 1, "sub": "35 to 60", "style": "muted", "src": "35 to 60: quarantine. The write goes to an isolated namespace and the agent keeps running"}, {"id": "de", "label": "Deny", "col": 2, "row": 2, "sub": "above 60, alert", "src": "Above 60: deny, and send an alert"}], "edges": [{"from": "w", "to": "sc", "src": "A function that runs before each write and scores it"}, {"from": "sc", "to": "al", "src": "Below 35: allow."}, {"from": "sc", "to": "qu", "style": "hot", "src": "35 to 60: quarantine. The write goes to an isolated namespace and the agent keeps running"}, {"from": "sc", "to": "de", "src": "Above 60: deny, and send an alert"}], "note": "Thresholds are AWS’s own, as described in its post"}'
 imageTag: 'AI security'
 heroImage: '../../assets/post-images/agent-memory-is-a-write-path.png'
 imageTheme: 'purple'

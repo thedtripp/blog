@@ -2,6 +2,8 @@
 title: "Confluent cut its OpenSearch hot tier from 168 nodes to 90"
 description: "AWS describes how Confluent swapped instance types at constant node count, measured the headroom, then removed nodes until JVM heap became the limit."
 pubDate: 'Nov 11 2026 13:00'
+imageHeadline: '168 OpenSearch nodes became 90'
+imageDiagram: '{"nodes": [{"id": "a", "label": "r6gd", "col": 0, "row": 1, "sub": "168 nodes", "style": "muted", "src": ["The hot tier ran on r6gd, a previous-generation Graviton2 instance", "ended up with 90 nodes instead of 168"]}, {"id": "b", "label": "oi2", "col": 1, "row": 1, "sub": "same count, one-third CPU", "src": "At equal node count oi2 ran at roughly one-third the CPU of r6gd"}, {"id": "c", "label": "oi2", "col": 2, "row": 1, "sub": "90 nodes, 1.9x load each", "src": "Each oi2 node ended up carrying about 1.9x the load of an r6gd node (168 divided by 90)"}], "edges": [{"from": "a", "to": "b", "label": "swap type", "src": "Type swap at constant node count"}, {"from": "b", "to": "c", "label": "rightsize", "style": "hot", "src": "Iterative rightsizing. Nodes were removed in steps"}], "note": "Figures as reported in the AWS Big Data Blog post"}'
 imageTag: 'OpenSearch sizing'
 heroImage: '../../assets/post-images/confluent-opensearch-fewer-nodes-measure-first.png'
 imageTheme: 'red'

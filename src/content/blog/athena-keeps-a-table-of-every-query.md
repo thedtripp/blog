@@ -2,6 +2,8 @@
 title: 'Athena now keeps a table of every query it runs'
 description: "Athena's new system tables make query telemetry something you can query with SQL, in an open table format you own."
 pubDate: 'Nov 10 2026 15:00'
+imageHeadline: 'Athena now logs every query to a table'
+imageDiagram: '{"nodes": [{"id": "q", "label": "Athena query", "col": 0, "row": 1, "sub": "success or failed", "src": "one row for every query that completes, successful or failed"}, {"id": "t", "label": "query_executions", "col": 1, "row": 1, "sub": "one row per query", "src": "one row for every query that completes, successful or failed"}, {"id": "s", "label": "S3 Tables", "col": 2, "row": 0, "sub": "Apache Iceberg", "src": "The table is Apache Iceberg on Amazon S3 Tables, in your own account"}, {"id": "o", "label": "DuckDB, Redshift", "col": 2, "row": 2, "sub": "other Iceberg engines", "src": "other Iceberg-compatible engines such as DuckDB and Amazon Redshift can read it too"}], "edges": [{"from": "q", "to": "t", "label": "in minutes", "src": "Data shows up within minutes of a query finishing"}, {"from": "t", "to": "s", "label": "stored as", "src": "The table is Apache Iceberg on Amazon S3 Tables, in your own account"}, {"from": "t", "to": "o", "label": "can read", "style": "dashed", "src": "other Iceberg-compatible engines such as DuckDB and Amazon Redshift can read it too"}]}'
 imageTag: 'Data'
 heroImage: '../../assets/post-images/athena-keeps-a-table-of-every-query.png'
 imageTheme: 'blue'
