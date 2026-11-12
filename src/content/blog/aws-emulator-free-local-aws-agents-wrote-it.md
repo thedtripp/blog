@@ -5,6 +5,8 @@ pubDate: 'Nov 12 2026 09:00'
 imageHeadline: 'AWS Emulator: 200+ services, agent-built'
 imageTag: 'Dev tools'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/aws-emulator-free-local-aws-agents-wrote-it.png'
+imageTheme: 'purple'
 ---
 
 On November 11, 2026, AWS announced AWS Emulator, a local emulator you run on your own machine. The [AWS News Blog announcement](https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/) says the AWS CLI, the AWS SDKs and coding agents talk to it over a local HTTPS endpoint using the same AWS APIs they would use in the cloud. There is no additional service fee, and the source is on GitHub.
