@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Poppins;font-weight:500;src:url(fonts/poppins-500.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-800.woff2) format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Poppins,sans-serif}
+:root{--rgb:{{RGB}}}
+html,body{width:1200px;height:630px;overflow:hidden;background:#111;color:#fff}
+.bg{position:absolute;inset:0;background:url(sky.jpg) center/cover;opacity:.8}
+.overlay{position:absolute;inset:0;background:rgb(var(--rgb));mix-blend-mode:overlay}
+.shade{position:absolute;inset:0;background:rgba(var(--rgb),.7)}
+.logo{position:absolute;left:60px;top:44px;font-size:26px;font-weight:800;text-transform:uppercase}
+h1{position:absolute;left:60px;top:84px;width:860px;font-size:60px;line-height:1.05;font-weight:800;text-transform:uppercase}
+.num{color:#ffd54a}
+.avatar{position:absolute;right:50px;top:36px;width:190px;height:190px;border-radius:50%;border:6px solid #fff;background:url({{AVATAR}}) center/cover;box-shadow:0 8px 28px rgba(0,0,0,.35)}
+svg{position:absolute;left:0;top:0}
+.url{position:absolute;right:60px;bottom:10px;font-size:20px;font-weight:500;opacity:.85}
+</style>
+<div class="bg"></div><div class="overlay"></div><div class="shade"></div>
+<div class="logo">DD Tripp</div>
+<h1>{{TITLE}}</h1>
+<div class="avatar"></div>
+{{DIAGRAM}}
+<div class="url">ddtripp.com/blog</div>
