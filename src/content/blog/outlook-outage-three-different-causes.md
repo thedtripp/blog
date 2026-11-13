@@ -5,6 +5,8 @@ pubDate: 'Nov 13 2026 09:00'
 imageHeadline: 'Microsoft widens email timeout to 48 hours'
 imageTag: 'Microsoft 365'
 imageExpression: 'confused'
+heroImage: '../../assets/post-images/outlook-outage-three-different-causes.png'
+imageTheme: 'red'
 ---
 
 Microsoft said it was extending Outlook's email "timeout window" to 48 hours "to help protect delayed messages as delivery catches up," the [BBC reports](https://www.bbc.co.uk/news/articles/cwvg238zrnm5o). That is the practical consequence of an outage that, by the BBC's count, ran for more than 20 hours. Everything below is as of November 13, and the story is still moving.
