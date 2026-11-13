@@ -5,6 +5,8 @@ pubDate: 'Nov 13 2026 13:00'
 imageHeadline: '61,495 queries per second on the new Graviton'
 imageTag: 'RDS PostgreSQL'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/graviton5-rds-costs-more-wins-on-price.png'
+imageTheme: 'purple'
 ---
 
 The new Graviton5 instances on Amazon RDS cost more per hour than the generation before, and AWS's benchmark says they are still the cheaper way to buy queries. The [AWS Database Blog post](https://aws.amazon.com/blogs/database/boosting-amazon-rds-with-aws-graviton5-benchmarks/) (published Nov 12) compares four instance generations on RDS for PostgreSQL. The numbers are AWS's, on a narrow test, so the setup matters as much as the result.
