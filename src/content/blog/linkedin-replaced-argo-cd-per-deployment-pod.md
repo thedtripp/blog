@@ -5,6 +5,8 @@ pubDate: 'Nov 13 2026 13:00'
 imageHeadline: '925 deploy failures became 63'
 imageTag: 'GitOps'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/linkedin-replaced-argo-cd-per-deployment-pod.png'
+imageTheme: 'green'
 ---
 
 LinkedIn says it replaced Argo CD with its own GitOps engine, and that deployment-infrastructure failures fell from 925 to 63 while deployment volume rose 3.7x. InfoQ's [write-up by Claudio Masolo](https://www.infoq.com/news/2026/11/kubernetes-argocd-linkedin/) (Nov 12, 2026) covers LinkedIn's own post. The numbers are LinkedIn's, and they come with a caveat worth reading first.
