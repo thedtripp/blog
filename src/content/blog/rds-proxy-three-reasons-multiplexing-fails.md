@@ -5,6 +5,8 @@ pubDate: 'Nov 14 2026 13:00'
 imageHeadline: '154 connections, none of them shared'
 imageTag: 'RDS Proxy'
 imageExpression: 'facepalm'
+heroImage: '../../assets/post-images/rds-proxy-three-reasons-multiplexing-fails.png'
+imageTheme: 'purple'
 ---
 
 You put RDS Proxy in front of PostgreSQL to hold fewer database connections, and the number does not drop. A [post on the AWS Database Blog](https://aws.amazon.com/blogs/database/improve-rds-proxy-multiplexing-for-postgresql-part-1-common-causes/) says the cause is usually the client application, because certain client behaviors force the proxy to pass each client connection through to the database one-for-one. This is Part 1 of a two-part series, and it focuses on Java and Python clients.
