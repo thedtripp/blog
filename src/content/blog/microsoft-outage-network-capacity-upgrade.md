@@ -5,6 +5,8 @@ pubDate: 'Nov 14 2026 09:00'
 imageHeadline: 'Microsoft blames network upgrade, not attack'
 imageTag: 'Microsoft 365'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/microsoft-outage-network-capacity-upgrade.png'
+imageTheme: 'red'
 ---
 
 Microsoft says the global outage that took down Outlook, Teams and Copilot "was a technical issue not related to cyber or AI / agents," and that it "was introduced by an issue during an earlier network capacity upgrade that surfaced following a recent network change." That is the wording [The Verge](https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage) quotes from Microsoft's status update. Everything below is as of November 14, and Microsoft has not yet published its full report.
