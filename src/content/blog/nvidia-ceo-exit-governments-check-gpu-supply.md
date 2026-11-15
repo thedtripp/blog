@@ -5,6 +5,8 @@ pubDate: 'Nov 15 2026 09:00'
 imageHeadline: 'Korea says 260,000 GPUs still on'
 imageTag: 'Nvidia'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/nvidia-ceo-exit-governments-check-gpu-supply.png'
+imageTheme: 'blue'
 ---
 
 As of Nov 15, 2026, several governments responded to Nvidia CEO Jensen Huang's exit by checking on chip supply and local projects. Two outlets, [TechCrunch](https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/) and [The Verge](https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo), both published on Nov 14, report on what it means for people who buy or build on Nvidia hardware. This post only covers that supply side, and every claim below is attributed to the outlet that made it.
