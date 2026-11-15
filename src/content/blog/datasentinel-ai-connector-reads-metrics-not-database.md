@@ -5,6 +5,8 @@ pubDate: 'Nov 15 2026 13:00'
 imageHeadline: 'AI reads Postgres metrics, not the database'
 imageTag: 'PostgreSQL'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/datasentinel-ai-connector-reads-metrics-not-database.png'
+imageTheme: 'green'
 ---
 
 On Nov 15, 2026, Datasentinel [announced release 2026.10](https://www.postgresql.org/about/news/datasentinel-202610-released-with-ai-connector-3400/) of its commercial PostgreSQL monitoring platform. The headline feature is AI Connector, which lets an AI assistant answer questions like "why was the orders database slow at 9:00 this morning?" from the metrics Datasentinel already collects. Everything below is from the vendor's own announcement.
