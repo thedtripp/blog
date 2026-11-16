@@ -5,6 +5,8 @@ pubDate: 'Nov 16 2026 13:00'
 imageHeadline: 'Uber guards agents in 3 layers'
 imageTag: 'AI Security'
 imageExpression: 'neutral'
+heroImage: '../../assets/post-images/uber-agent-security-judges-actions-not-access.png'
+imageTheme: 'purple'
 ---
 
 Identity and API permissions answer whether an agent may touch a resource. They don't answer whether this particular action makes sense for this request. That gap is the starting point of a framework from Uber Engineering, summarized by Sergio De Simone in an [InfoQ news article](https://www.infoq.com/news/2026/11/uber-secure-ai-framework/) dated Nov 15, 2026. I read the InfoQ summary in full, not Uber's original article, so everything below is InfoQ's account.
