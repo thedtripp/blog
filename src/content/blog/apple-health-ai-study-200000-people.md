@@ -5,6 +5,8 @@ pubDate: 'Nov 16 2026 09:00'
 imageHeadline: 'Apple wants 200,000 AI health raters'
 imageTag: 'Apple'
 imageExpression: 'neutral'
+heroImage: '../../assets/post-images/apple-health-ai-study-200000-people.png'
+imageTheme: 'red'
 ---
 
 As of Nov 16, 2026, Apple has opened enrollment for a study of how people use conversational AI for health questions. [The Verge](https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools) and [TechCrunch](https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/) both report it, and every claim below is attributed to the outlet that made it. The two outlets disagree on one detail, covered below.
