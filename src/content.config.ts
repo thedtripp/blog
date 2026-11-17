@@ -24,6 +24,7 @@ const blog = defineCollection({
 			// Avatar expression on the card (scripts/post-image/avatars/<name>.jpg); defaults to smug.
 			imageExpression: z
 				.enum([
+					'coffee',
 					'confused',
 					'crying',
 					'excited',
@@ -31,13 +32,18 @@ const blog = defineCollection({
 					'eyebrow',
 					'facepalm',
 					'fist_pump',
+					'grimace',
+					'lightbulb',
 					'mind_blown',
+					'nervous_sweat',
 					'neutral',
+					'point',
 					'scared',
 					'shocked',
 					'side_eye',
 					'smug',
 					'squint',
+					'stop',
 					'thinking',
 					'thumbs_up',
 				])
