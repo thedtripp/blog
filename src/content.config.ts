@@ -23,7 +23,24 @@ const blog = defineCollection({
 			imageDiagram: z.string().optional(),
 			// Avatar expression on the card (scripts/post-image/avatars/<name>.jpg); defaults to smug.
 			imageExpression: z
-				.enum(['confused', 'crying', 'excited', 'exhausted', 'facepalm', 'neutral', 'scared', 'shocked', 'smug', 'thinking'])
+				.enum([
+					'confused',
+					'crying',
+					'excited',
+					'exhausted',
+					'eyebrow',
+					'facepalm',
+					'fist_pump',
+					'mind_blown',
+					'neutral',
+					'scared',
+					'shocked',
+					'side_eye',
+					'smug',
+					'squint',
+					'thinking',
+					'thumbs_up',
+				])
 				.optional(),
 		}),
 });
