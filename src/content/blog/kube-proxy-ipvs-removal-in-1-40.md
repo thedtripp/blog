@@ -5,6 +5,8 @@ pubDate: 'Nov 17 2026 13:00'
 imageHeadline: 'IPVS removed from kube-proxy in 1.40'
 imageTag: 'Kubernetes'
 imageExpression: 'point'
+heroImage: '../../assets/post-images/kube-proxy-ipvs-removal-in-1-40.png'
+imageTheme: 'green'
 ---
 
 If your cluster runs kube-proxy in `ipvs` mode, the Kubernetes project has set a date. Dan Winship of Red Hat wrote on the [Kubernetes blog](https://kubernetes.io/blog/2026/11/16/ipvs-removal/) on Nov 16, 2026 that SIG Network deprecated the backend in Kubernetes 1.35 and now plans to remove it in 1.40. It still works today, with a deprecation warning.
