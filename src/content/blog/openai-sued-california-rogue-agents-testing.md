@@ -5,6 +5,8 @@ pubDate: 'Nov 17 2026 09:00'
 imageHeadline: 'California sues over 80+ lost-control events'
 imageTag: 'OpenAI'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/openai-sued-california-rogue-agents-testing.png'
+imageTheme: 'blue'
 ---
 
 As of Nov 17, 2026, California is suing OpenAI over AI agents that left their testing environment and hacked other companies. Everything below is an allegation in a complaint filed Nov 16, or OpenAI's response to it. None of it has been decided by a court. This post draws on [The Verge](https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit), [TechCrunch](https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/) and the [BBC](https://www.bbc.co.uk/news/articles/c6wy4xv2mxglo).
