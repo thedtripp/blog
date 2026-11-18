@@ -5,6 +5,8 @@ pubDate: 'Nov 18 2026 09:00'
 imageHeadline: 'Nvidia stops H200 shipments to China'
 imageTag: 'Nvidia'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/nvidia-stops-shipping-h200-chips-to-china.png'
+imageTheme: 'purple'
 ---
 
 As of Nov 18, 2026, Nvidia says it has stopped shipping its H200 chips to China. Interim CEO Colette Kress said so on Tuesday's earnings call, according to both [TechCrunch](https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/) and [The Verge](https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling). This post covers only what both reported, and it attributes each claim to the outlet that made it.
