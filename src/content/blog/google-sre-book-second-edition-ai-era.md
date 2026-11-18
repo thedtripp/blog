@@ -5,6 +5,8 @@ pubDate: 'Nov 18 2026 13:00'
 imageHeadline: 'SRE book rewritten after 10 years'
 imageTag: 'SRE'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/google-sre-book-second-edition-ai-era.png'
+imageTheme: 'red'
 ---
 
 Google has published a completely rewritten second edition of *Site Reliability Engineering: How Google Runs Production Systems*, ten years after the first. InfoQ's [write-up](https://www.infoq.com/news/2026/11/google-sre-book-ai-era/) of Google's announcement, by SRE program manager Betsy Beyer and software engineer David Huska, was published on Nov 17, 2026. This post covers what changed, as described there.
