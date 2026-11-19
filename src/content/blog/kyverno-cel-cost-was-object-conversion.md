@@ -5,6 +5,8 @@ pubDate: 'Nov 19 2026 13:00'
 imageHeadline: '86% of allocations: parsing, not policy'
 imageTag: 'Kubernetes'
 imageExpression: 'lightbulb'
+heroImage: '../../assets/post-images/kyverno-cel-cost-was-object-conversion.png'
+imageTheme: 'blue'
 ---
 
 A [CNCF post by Raunak Madan of Nirmata](https://www.cncf.io/blog/2026/11/18/optimizing-kubernetes-admission-control-where-kyvernos-cel-admission-cost-actually-goes/) (Nov 18) profiles Kyverno's CEL-based policy engines and finds the cost was not where the team expected. They assumed CEL evaluation would dominate. It barely registered.
