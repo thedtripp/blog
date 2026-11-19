@@ -5,6 +5,8 @@ pubDate: 'Nov 19 2026 09:00'
 imageHeadline: 'GPU Lambda: EC2 price plus 9.75%'
 imageTag: 'AWS Lambda'
 imageExpression: 'neutral'
+heroImage: '../../assets/post-images/lambda-gpu-fee-on-top-of-ec2.png'
+imageTheme: 'purple'
 ---
 
 [AWS announced](https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/) on Nov 18 that Lambda Event Functions running on Lambda Managed Instances (LMI) can now use EC2 G-series GPU instances. The pitch is GPU work with serverless packaging: you build a container image, point a function at it, and Lambda handles provisioning, scaling and event wiring. This is a summary of that announcement as of Nov 19, 2026.
