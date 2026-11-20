@@ -5,6 +5,8 @@ pubDate: 'Nov 20 2026 13:00'
 imageHeadline: '3x less throughput from audit logging'
 imageTag: 'Aurora PostgreSQL'
 imageExpression: 'lightbulb'
+heroImage: '../../assets/post-images/aurora-logging-pgaudit-3x-throughput.png'
+imageTheme: 'red'
 ---
 
 An AWS Database Blog post, [Performance impact of excessive logging in Amazon Aurora PostgreSQL](https://aws.amazon.com/blogs/database/performance-impact-of-excessive-logging-in-amazon-aurora-postgresql/) (Nov 19), tested the same PL/pgSQL function under three logging settings. At 8 clients the three were indistinguishable. At 800 clients, adding pgaudit cut throughput by about three times. The author attributes it to the log-writing path, not queries, locks or storage.
