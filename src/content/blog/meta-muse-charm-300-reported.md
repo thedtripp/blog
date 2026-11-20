@@ -5,6 +5,8 @@ pubDate: 'Nov 20 2026 09:00'
 imageHeadline: 'Meta Muse Charm reportedly $300'
 imageTag: 'AI hardware'
 imageExpression: 'eyebrow'
+heroImage: '../../assets/post-images/meta-muse-charm-300-reported.png'
+imageTheme: 'green'
 ---
 
 As of Nov 20, 2026: Meta plans to charge $300 for the Muse Charm, according to a report by [The Information](https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price), relayed by The Verge and [TechCrunch](https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/). Meta has not announced a price. When TechCrunch asked, a Meta spokesperson didn't deny the claim.
