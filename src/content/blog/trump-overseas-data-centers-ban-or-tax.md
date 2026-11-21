@@ -5,6 +5,8 @@ pubDate: 'Nov 21 2026 09:00'
 imageHeadline: 'Overseas AI data centers: ban or tax?'
 imageTag: 'Data centers'
 imageExpression: 'confused'
+heroImage: '../../assets/post-images/trump-overseas-data-centers-ban-or-tax.png'
+imageTheme: 'purple'
 ---
 
 At a press conference on Friday, Nov 20, President Trump said US companies will not be allowed to build data centers outside the country. In the same answer he said that if they do, "we're going to put a tremendous tax on them." Those are two different policies, and as of Nov 21 there is no text behind either one. This post sticks to what two news outlets reported.
