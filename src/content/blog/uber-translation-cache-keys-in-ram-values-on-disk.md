@@ -5,6 +5,8 @@ pubDate: 'Nov 21 2026 13:00'
 imageHeadline: '800 MB cache cut to 40 MB'
 imageTag: 'Go cache'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/uber-translation-cache-keys-in-ram-values-on-disk.png'
+imageTheme: 'blue'
 ---
 
 Uber redesigned the Go cache that serves its translations. In one example the cache went from roughly 800 MB in memory to roughly 40 MB of metadata, and the hit rate stayed above 99.9%. [InfoQ's write-up](https://www.infoq.com/news/2026/11/uber-go-translation-cache/) (Nov 20) summarizes Uber's own engineering post. The numbers below are Uber's, as reported there.
