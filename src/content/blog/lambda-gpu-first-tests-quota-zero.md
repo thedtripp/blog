@@ -5,6 +5,8 @@ pubDate: 'Nov 22 2026 09:00'
 imageHeadline: '48 requests, one GPU model, quota zero'
 imageTag: 'Lambda GPU'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/lambda-gpu-first-tests-quota-zero.png'
+imageTheme: 'green'
 ---
 
 AWS added GPU support to Lambda Managed Instances. This post covers [the follow-up report](https://www.infoq.com/news/2026/11/aws-lambda-gpu-managed-instances/) (Nov 22) that adds the first hands-on results. Event Functions on Lambda Managed Instances can now run on EC2 G-series instances (G4dn, G5, G6, G6f, Gr6, Gr6f and G6e at launch), packaged as container images and triggered by the same event sources as any other function. It is generally available in commercial regions where both Managed Instances and G-series exist.
