@@ -5,6 +5,8 @@ pubDate: 'Nov 22 2026 13:00'
 imageHeadline: 'No credentials inside the agent sandbox'
 imageTag: 'Agent sandbox'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/google-agent-compute-engine-no-credentials-in-sandbox.png'
+imageTheme: 'red'
 ---
 
 [Google announced Agent Compute Engine](https://www.infoq.com/news/2026/11/google-agent-compute-engine/) (reported Nov 22), a managed service that runs AI agents in isolated microVMs and can suspend and resume them with checkpointing. The design keeps credentials, API keys and OAuth refresh tokens outside the sandbox. An external Agent Gateway authenticates requests and injects the secrets that are needed.
