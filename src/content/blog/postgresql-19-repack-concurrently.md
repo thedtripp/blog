@@ -5,6 +5,8 @@ pubDate: 'Nov 23 2026 09:00'
 imageHeadline: 'REPACK now runs without blocking reads'
 imageTag: 'PostgreSQL 19'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/postgresql-19-repack-concurrently.png'
+imageTheme: 'purple'
 ---
 
 [InfoQ's summary of the PostgreSQL 19 release](https://www.infoq.com/news/2026/11/postgresql-19-released/) (Nov 22) lists a lot of changes. Two of them touch day-to-day operations more than the rest: a table repack that does not block reads or writes, and a way to influence query plans without editing queries.
