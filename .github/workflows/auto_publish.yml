@@ -21,10 +21,15 @@ concurrency:
 
 jobs:
   publish:
+    # Skip, instead of failing, runs that can never succeed: runs for a PR that is already closed
+    # (the branch is gone), and runs started by this workflow's own "Add title image" push, which
+    # would queue behind the run that merges the PR and then fail at checkout.
     if: >-
       contains(github.event.pull_request.labels.*.name, 'auto-publish') &&
       vars.AUTO_PUBLISH != 'false' &&
-      github.event.pull_request.head.repo.full_name == github.repository
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.state == 'open' &&
+      github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
