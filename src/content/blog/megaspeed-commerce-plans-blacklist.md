@@ -5,6 +5,8 @@ pubDate: 'Nov 24 2026 09:00'
 imageHeadline: 'US plans to blacklist Megaspeed'
 imageTag: 'Export controls'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/megaspeed-commerce-plans-blacklist.png'
+imageTheme: 'blue'
 ---
 
 As of Nov 24, 2026, the US Commerce Department says it plans to add Megaspeed Ltd, a Singapore-based data center developer, to a list of entities that are barred from buying or selling goods in the US. Its subsidiary Speedmatrix is also being added, according to the [BBC's report](https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo), published Nov 23. This post covers only what that report says, and the allegations in it are allegations.
