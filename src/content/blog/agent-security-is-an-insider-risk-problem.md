@@ -5,6 +5,8 @@ pubDate: 'Nov 24 2026 13:00'
 imageHeadline: 'Give each agent its own identity'
 imageTag: 'Agent security'
 imageExpression: 'point'
+heroImage: '../../assets/post-images/agent-security-is-an-insider-risk-problem.png'
+imageTheme: 'green'
 ---
 
 The fastest path to a production failure, according to Amanda Walker of Google, is giving an AI agent a human's raw credentials. [InfoQ's write-up](https://www.infoq.com/news/2026/11/qcon-ai-agent-security/) of her QCon San Francisco session, published Nov 23, covers what she suggests doing instead. Walker is senior director of engineering for privacy, safety and security at Google. What follows is her talk as InfoQ reports it.
