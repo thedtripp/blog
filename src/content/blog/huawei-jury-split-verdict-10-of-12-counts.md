@@ -5,6 +5,8 @@ pubDate: 'Nov 25 2026 09:00'
 imageHeadline: 'Huawei guilty on 10 of 12 counts'
 imageTag: 'Huawei'
 imageExpression: 'neutral'
+heroImage: '../../assets/post-images/huawei-jury-split-verdict-10-of-12-counts.png'
+imageTheme: 'red'
 ---
 
 As of Nov 25, 2026, a federal jury in Brooklyn has found Huawei guilty on 10 of 12 criminal counts. The verdict is split, and the part that was rejected is the part prosecutors framed as the biggest. This post summarizes what two outlets, [BBC News](https://www.bbc.co.uk/news/articles/cmy49ngydqzpo) and [The Verge](https://www.theverge.com/tech/1041820/huawei-guilty-trade-secrets-trial), report about it. It is a jury verdict, not a final outcome.
