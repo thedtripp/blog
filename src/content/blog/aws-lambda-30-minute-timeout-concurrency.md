@@ -5,6 +5,8 @@ pubDate: 'Nov 25 2026 13:00'
 imageHeadline: '30-minute Lambda needs 2x concurrency'
 imageTag: 'AWS Lambda'
 imageExpression: 'point'
+heroImage: '../../assets/post-images/aws-lambda-30-minute-timeout-concurrency.png'
+imageTheme: 'purple'
 ---
 
 AWS has doubled the maximum timeout of on-demand Lambda Event Functions from 15 to 30 minutes, in all commercial regions, at standard pricing and without an opt-in. [InfoQ's write-up](https://www.infoq.com/news/2026/11/aws-lambda-30-minute-timeout/) (Nov 25) covers the change and the checks AWS and others say to run before you raise the number.
