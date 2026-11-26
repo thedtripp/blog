@@ -5,6 +5,8 @@ pubDate: 'Nov 26 2026 09:00'
 imageHeadline: 'One usage meter for all of ChatGPT'
 imageTag: 'ChatGPT'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/chatgpt-single-usage-meter-heavy-users-limits.png'
+imageTheme: 'blue'
 ---
 
 As of Nov 26, 2026, OpenAI has started rolling out a combined Chat and Work experience in ChatGPT to a small group of Pro subscribers, according to [TechCrunch](https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/). The part that matters to people who use it all day is the meter. This post covers only what that report says.
