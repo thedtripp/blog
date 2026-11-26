@@ -5,6 +5,8 @@ pubDate: 'Nov 26 2026 13:00'
 imageHeadline: '10x dispatch throughput at peak'
 imageTag: 'DoorDash'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/doordash-dispatch-coordinator-and-workers.png'
+imageTheme: 'green'
 ---
 
 [InfoQ reports](https://www.infoq.com/news/2026/11/doordash-dispatch-redesign/) (Nov 25) that DoorDash rebuilt its real-time dispatch platform, replacing a monolithic optimization engine with a distributed design that separates coordination from computation. DoorDash reports 10x higher throughput and more than 99.99% availability at peak. The interesting part is why adding machines was not the fix.
