@@ -5,6 +5,8 @@ pubDate: 'Nov 27 2026 09:00'
 imageHeadline: '4 countries, shipments on hold'
 imageTag: 'AI hardware'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/nvidia-pauses-server-shipments-southeast-asia.png'
+imageTheme: 'red'
 ---
 
 As of Nov 27 2026, Nvidia has reportedly stopped server shipments to four countries in Southeast Asia, and nobody has said for how long. [TechCrunch](https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/) published the short report on Nov 26, and it rests on a Wall Street Journal story. This post covers what that report says, plus context from a [BBC analysis](https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo) published the same day.
