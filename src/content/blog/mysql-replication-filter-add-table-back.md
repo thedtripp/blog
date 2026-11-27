@@ -5,6 +5,8 @@ pubDate: 'Nov 27 2026 13:00'
 imageHeadline: 'Re-adding a table: stop at the binlog position'
 imageTag: 'MySQL replication'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/mysql-replication-filter-add-table-back.png'
+imageTheme: 'purple'
 ---
 
 Excluding a table from a MySQL replica takes three statements. Putting it back is harder, and getting it wrong can mean rebuilding the replica. Bhuvanes Waran of Percona wrote up the safe way in [A Practical Guide to Adding and Updating MySQL Replication Filters](https://www.percona.com/blog/a-practical-guide-to-adding-and-updating-mysql-replication-filters/), published Nov 27 2026. This post summarizes it.
