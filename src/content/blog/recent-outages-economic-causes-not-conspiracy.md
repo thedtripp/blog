@@ -5,6 +5,8 @@ pubDate: 'Nov 28 2026 09:00'
 imageTag: 'Outages'
 imageHeadline: 'Six outages, no common cause'
 imageExpression: 'thinking'
+heroImage: '../../assets/post-images/recent-outages-economic-causes-not-conspiracy.png'
+imageTheme: 'blue'
 ---
 
 [Bruce Schneier's essay](https://www.schneier.com/blog/archives/2026/11/recent-outages-have-economic-causes.html) (Nov 27) starts from a bad week: outages at Microsoft, the FAA, a handful of banks, United Airlines, an unnamed classified NSA network, and Apple. His first claim is the one engineers will want to check first: there is no common cause.
