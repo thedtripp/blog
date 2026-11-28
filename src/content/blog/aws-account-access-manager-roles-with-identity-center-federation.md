@@ -5,6 +5,8 @@ pubDate: 'Nov 28 2026 13:00'
 imageTag: 'AWS IAM'
 imageHeadline: 'One federation point, existing IAM roles'
 imageExpression: 'squint'
+heroImage: '../../assets/post-images/aws-account-access-manager-roles-with-identity-center-federation.png'
+imageTheme: 'green'
 ---
 
 [InfoQ reports](https://www.infoq.com/news/2026/11/aws-centralized-workforce-access/) (Nov 28) that AWS introduced Account Access Manager, a way to centrally assign workforce users and groups to existing IAM roles across an organization. It keeps custom trust policies and ABAC configurations, and it improves individual identity attribution and auditability. The interesting part is which trade-off it is trying to remove.
